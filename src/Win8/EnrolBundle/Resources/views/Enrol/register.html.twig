@@ -1,0 +1,18 @@
+{% extends "Win8LayoutBundle::master.html.twig" %}
+
+{% block title %}Win8EnrolBundle:Enrol:register{% endblock %}
+
+{% block body %}
+    {% for flashMessage in app.session.flashbag.get('notice') %}
+        <div class="alert alert-success" role="alert">
+            {{ flashMessage }}
+        </div>
+    {% endfor %}
+<h1>Formularz rejestracyjny</h1>
+    <form class="myform" action="{{ path('register_participant') }}" method="post" {{ form_enctype(form) }}>
+        {{ form_widget(form) }}
+        <p>
+            <button type="submit" class="btn btn-success">Zapisz</button>
+        </p>
+    </form>
+{% endblock %}
