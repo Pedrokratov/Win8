@@ -1,0 +1,7 @@
+parameters:
+#    win8_user.example.class: Win8\UserBundle\Example
+
+services:
+#    win8_user.example:
+#        class: %win8_user.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

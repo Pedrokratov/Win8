@@ -1,0 +1,4 @@
+services:
+#    win8_layout.example:
+#        class: Win8\LayoutBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]

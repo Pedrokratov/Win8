@@ -1,0 +1,25 @@
+win8_enrol_homepage:
+    path:     /
+    defaults: { _controller: Win8EnrolBundle:Default:show }
+
+register_participant:
+    path:     /zapis-na-kurs
+    defaults: { _controller: Win8EnrolBundle:Enrol:register }
+
+register_summary:
+    path:     /kursWin8/summary/
+    defaults: { _controller: Win8EnrolBundle:Enrol:summary }
+
+show_all:
+    path:     /admin/zapisani
+    defaults: { _controller: Win8EnrolBundle:Enrol:list }
+
+registration_delete:
+    path:     /admin/deleteRegistered/{id}
+    defaults: { _controller: Win8EnrolBundle:Enrol:delete }
+
+termin_admin:
+    resource: "@Win8EnrolBundle/Resources/config/routing/Termin.yml"
+    prefix:   /admin
+
+

@@ -1,0 +1,3 @@
+win8_layout_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: Win8LayoutBundle:Default:index }

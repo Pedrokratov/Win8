@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>{% block title %}Zapisy{% endblock %}</title>
+    {% block stylesheets %}
+        {% stylesheets
+        '@Win8LayoutBundle/Resources/public/css/style.css'
+        'https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'
+        %}
+        <link href="{{ asset_url }}" type="text/css" rel="stylesheet">
+        {% endstylesheets %}
+    {% endblock %}
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+</head>
+<body>
+
+<div class="container">
+    <h1>Szkolenie Windows 8</h1>
+    <nav role="navigation" class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-collapse collapse" id="navbar">
+                {{ knp_menu_render('Win8LayoutBundle:Builder:mainMenu')  }}
+            </div>
+        </div>
+    </nav>
+
+
+    {% block body %}
+
+    {% endblock %}
+
+</div>
+{% block javascripts %}
+    {% javascripts
+    'https://code.jquery.com/jquery-1.11.1.min.js'
+    'https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js'
+    %}
+    <script src="{{ asset_url }}"></script>
+    {% endjavascripts %}
+{% endblock %}
+</body>
+</html>

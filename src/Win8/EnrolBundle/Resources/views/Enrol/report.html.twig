@@ -1,0 +1,24 @@
+{% extends "Win8LayoutBundle::master.html.twig" %}
+
+{% block title %}Win8EnrolBundle:Enrol:register{% endblock %}
+
+{% block body %}
+
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Imię</th>
+            <th>Nazwisko</th>
+            <th>Dział</th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>{{ registration.firstname }}</td>
+            <td>{{ registration.surname }}</td>
+            <td>{{ registration.department }}</td>
+        </tr>
+        </tbody>
+    </table>
+{% endblock %}

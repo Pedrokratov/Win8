@@ -1,0 +1,11 @@
+new_termin:
+    path:     /nowy-termin
+    defaults: { _controller: Win8EnrolBundle:MyTermin:newTermin }
+
+show_all_termins:
+    path:     /dostepne-terminy
+    defaults: { _controller: Win8EnrolBundle:MyTermin:showAllTermins }
+
+termin_delete:
+    path:     /delete/{id}
+    defaults: { _controller: Win8EnrolBundle:MyTermin:delete }

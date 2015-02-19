@@ -1,0 +1,39 @@
+{% extends "Win8LayoutBundle::master.html.twig" %}
+
+{% block title %}Win8EnrolBundle:Enrol:register{% endblock %}
+
+{% block body %}
+    <div>    <a href="{{ path('new_termin') }}">
+            <h1 style="color: #000000; border-style:solid;border-width: 1px;background-color: cornflowerblue;">Dodaj nowy termin</h1>
+        </a></div>
+
+
+<table class="table">
+    <thead>
+    <tr>
+        <th>Id</th>
+        <th>Data od</th>
+        <th>Data do</th>
+        <th>Liczba osób</th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for termin in termins %}
+        <tr>
+            <td>{{ termin.id }}</td>
+            <td>{{ termin.datefrom|date('Y-m-d') }}</td>
+            <td>{{ termin.dateto|date('Y-m-d') }}</td>
+            <td>{{ termin.availableplaceno }}</td>
+            <td>
+                <a href="{{ path('termin_delete', {'id': termin.id}) }}">
+                    [Usuń]
+                </a>
+            </td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}
+

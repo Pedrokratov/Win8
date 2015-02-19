@@ -1,0 +1,33 @@
+{% extends "Win8LayoutBundle::master.html.twig" %}
+
+{% block title %}Win8EnrolBundle:Enrol:register{% endblock %}
+
+{% block body %}
+
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Id</th>
+            <th>Imię</th>
+            <th>Nazwisko</th>
+            <th>Dział</th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for registered in registrations %}
+            <tr>
+                <td>{{ registered.id }}</td>
+                <td>{{ registered.firstname }}</td>
+                <td>{{ registered.surname }}</td>
+                <td>{{ registered.department }}</td>
+                <td>
+                    <a href="{{ path('registration_delete', {'id': registered.id}) }}">
+                        [Usuń]
+                    </a>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

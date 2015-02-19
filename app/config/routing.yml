@@ -1,0 +1,18 @@
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"
+
+win8_user:
+    resource: "@Win8UserBundle/Resources/config/routing.yml"
+    prefix:   /
+
+win8_enrol:
+    resource: "@Win8EnrolBundle/Resources/config/routing.yml"
+    prefix:   /
+
+win8_layout:
+    resource: "@Win8LayoutBundle/Resources/config/routing.yml"
+    prefix:   /
+
+app:
+    resource: @AppBundle/Controller/
+    type:     annotation
